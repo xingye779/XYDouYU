@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="auV-e0-gPE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2hI-ZK-1Yn">
+            <objects>
+                <viewController id="xIh-z7-E23" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dn2-zw-bcY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gRi-CG-Fo1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4JH-K0-Zzr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWh-D5-kXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2219" y="716"/>
+        </scene>
+        <!--关注-->
+        <scene sceneID="kJw-mr-CYF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="auV-e0-gPE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="关注" image="main_tab_qbfriends" selectedImage="main_tab_qbfriends_active" id="S0N-JC-9tC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b2C-jb-qdr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xIh-z7-E23" kind="relationship" relationship="rootViewController" id="DZR-0D-mQN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7w-Tk-SUJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-151" y="749"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="main_tab_qbfriends" width="27" height="27"/>
+        <image name="main_tab_qbfriends_active" width="27" height="27"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
