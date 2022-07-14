@@ -8,6 +8,13 @@
 import UIKit
 
 class Home: UIViewController {
+    // MARK: -添加标题菜单
+    lazy var pageTitleView : PageTitleView = {
+        let y = kStatusH + CGFloat(kNavigationH)
+        let frame = CGRect(x: 0, y: y, width: kScreenW, height: 44.0)
+        let titles = ["热门", "颜值", "舞蹈", "交友", "二次元"]
+        return PageTitleView(frame: frame, titles: titles)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +24,13 @@ class Home: UIViewController {
 
 
 extension Home {
-    
     private func setupUI() {
         setupNavigationBar()
+        view.addSubview(pageTitleView)
+        
     }
+    
+    
     
     private func setupNavigationBar() {
         
