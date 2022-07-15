@@ -6,16 +6,36 @@
 //
 
 import UIKit
+import Foundation
 
 class Home: UIViewController {
+    
+    let titles = ["热门", "颜值", "舞蹈", "交友", "二次元"]
+
     // MARK: -添加标题菜单
     lazy var pageTitleView : PageTitleView = {
         let y = kStatusH + CGFloat(kNavigationH)
-        let frame = CGRect(x: 0, y: y, width: kScreenW, height: 44.0)
-        let titles = ["热门", "颜值", "舞蹈", "交友", "二次元"]
+        let frame = CGRect(x: 0, y: y, width: kScreenW, height: kMenuH)
         return PageTitleView(frame: frame, titles: titles)
     }()
-
+    
+    lazy var pageContentView: PageContentView = {
+        
+        let y = kStatusH + kNavigationH + kMenuH + 2.5
+        let height = kScreenH - Double(kStatusH) - kNavigationH - kMenuH - kTabbarH
+        let frame = CGRect(x: 0, y: y , width: kScreenW, height: height)
+        var subViews: [UIViewController] = []
+        titles.forEach { value in
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(
+                red: CGFloat(CGFloat(arc4random_uniform(255))),
+                green: CGFloat(arc4random_uniform(255)),
+                blue: CGFloat(arc4random_uniform(255)))
+            subViews.append(vc)
+        }
+        return PageContentView(frame: frame, viewControllers: subViews, parentVC: self)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -27,10 +47,8 @@ extension Home {
     private func setupUI() {
         setupNavigationBar()
         view.addSubview(pageTitleView)
-        
+        view.addSubview(pageContentView)
     }
-    
-    
     
     private func setupNavigationBar() {
         
