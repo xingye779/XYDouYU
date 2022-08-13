@@ -28,7 +28,8 @@ class Home: UIViewController {
         let frame = CGRect(x: 0, y: y , width: kScreenW, height: height)
         // 2.确定所有的子控制器
         var subViews: [UIViewController] = []
-        titles.forEach { value in
+        subViews.append(RecommendVC())
+        for _ in 0...3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(
                 red: CGFloat(CGFloat(arc4random_uniform(255))),
@@ -46,6 +47,7 @@ class Home: UIViewController {
         super.viewDidLoad()
         // 设置UI界面
         setupUI()
+        
     }
 }
 

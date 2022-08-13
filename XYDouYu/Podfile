@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'XYDouYu' do
+    pod 'Alamofire' 	#网络请求
+    pod 'SwiftyJSON'	#json解析
+    pod 'Kingfisher'	#加载网络图片
+    pod 'MJRefresh'	#上下拉刷新
+    pod 'KakaJSON'	#json转model
+end

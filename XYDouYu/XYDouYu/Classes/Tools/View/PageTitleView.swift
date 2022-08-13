@@ -190,7 +190,7 @@ extension PageTitleView {
             green: kNormalColor.1 + colorDelta.1 * progress,
             blue: kNormalColor.2 + colorDelta.2 * progress)
             
-            // 4.记录更新的index
-            currentIndex = targetIndex
+        // 4.记录更新的index
+        currentIndex = targetIndex
     }
 }
