@@ -74,6 +74,10 @@ extension RecommendViewModel {
             }
         }
 
+//        let parameters =  ["limit": "4", "offset": "0", "time": NSDate.getCurrentTime()]
+
+//    http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1660467304
+        print("getCurrentTime---:\(NSDate.getCurrentTime())")
         // 3.请求第一部分游戏数据
         group.enter()
         queue.async(group: group) {

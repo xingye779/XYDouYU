@@ -92,14 +92,16 @@ extension RecommendVC: UICollectionViewDataSource, UICollectionViewDelegateFlowL
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var cell: UICollectionViewCell!
+        let group = recommendVM.anchorGroups[indexPath.section]
+        let anchorModel = group.room_list?[indexPath.item]
+        let cell: RecommendBaseCell!
         if indexPath.section == 1 {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellId, for:indexPath) as! RecommendPrettyCell
         }
         else {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellId, for:indexPath) as! RecommendNormalCell
         }
-        cell.backgroundColor = .white
+        cell.anchorModel = anchorModel
         return cell
     }
     

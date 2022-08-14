@@ -71,6 +71,12 @@
                 <constraint firstItem="Vd0-He-RoK" firstAttribute="centerY" secondItem="Hz5-yE-RHF" secondAttribute="centerY" id="t9W-0J-VN5"/>
             </constraints>
             <size key="customSize" width="217" height="177"/>
+            <connections>
+                <outlet property="desLabel" destination="a6r-to-9Ku" id="4Cf-DV-Axx"/>
+                <outlet property="iconImageView" destination="Thl-hF-7BN" id="yfC-x1-znW"/>
+                <outlet property="nickNameLabel" destination="h6y-Tk-qFA" id="k0g-BE-oax"/>
+                <outlet property="roomTitleLabel" destination="Hz5-yE-RHF" id="JnK-G2-hsh"/>
+            </connections>
             <point key="canvasLocation" x="-36.956521739130437" y="65.959821428571431"/>
         </collectionViewCell>
     </objects>

@@ -93,6 +93,12 @@
                 <constraint firstAttribute="trailing" secondItem="vjf-0L-QTI" secondAttribute="trailing" id="uzW-jT-9wh"/>
             </constraints>
             <size key="customSize" width="195" height="164"/>
+            <connections>
+                <outlet property="cityLabel" destination="vNn-Bn-mPI" id="6mw-2g-ROe"/>
+                <outlet property="iconImageView" destination="vjf-0L-QTI" id="RJr-2a-JsH"/>
+                <outlet property="onlineLabel" destination="Tgh-TN-pVE" id="V9Z-M3-6rE"/>
+                <outlet property="titleLabel" destination="JvH-1F-LfP" id="aGz-e8-ulp"/>
+            </connections>
             <point key="canvasLocation" x="236.95652173913047" y="39.508928571428569"/>
         </collectionViewCell>
     </objects>

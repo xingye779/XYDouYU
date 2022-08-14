@@ -7,11 +7,20 @@
 
 import UIKit
 
-class RecommendPrettyCell: UICollectionViewCell {
+class RecommendPrettyCell: RecommendBaseCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var onlineLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
+    override var anchorModel: AnchorModel? {
+        didSet {
+            super.anchorModel = anchorModel
+            
+            guard let anchor = anchorModel else {return}
+            titleLabel.text = anchor.room_name
+            onlineLabel.text = anchor.online
+            cityLabel.text = anchor.anchor_city
+        }
     }
-
 }
